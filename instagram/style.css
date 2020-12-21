@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+:root {
+    --text-color: #262626;
+}
 html {
     font-size: 62.5%;
     font-family: 'Open Sans', sans-serif;
@@ -10,18 +13,19 @@ html {
 /* Header styles */
 .header {
     display: grid;
-    height: 50px;
-    border-bottom: 1px solid gray;
+    height: 55px;
+    border-bottom: 1px solid #dbdbdb;
     grid-template-columns: repeat(3, minmax(100px, 300px));
     justify-content: center;
     gap: 30px;
     align-items: center;
 }
 .header-search {
-    width: 200px;
+    background-color: #fafafa;
+    width: 220px;
     height: 30px;
     justify-self: center;
-    border: 1px solid #cfcfcf;
+    border: 1px solid #dbdbdb;
     border-radius: 5px;
     text-align: center;
 }
@@ -33,8 +37,9 @@ html {
 .main-propile {
     max-width: 1000px;
     margin: 0 auto;
+    margin-bottom: 44px;
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 35% 65%;
 }
 .main-profile-photo {
     justify-self: center;
@@ -43,13 +48,75 @@ html {
 .main-profile-photo img {
     border-radius: 50%;
 }
+.main-profile-user {
+    display: flex;
+    align-items: center;
+}
 .main-profile-name {
     display: inline-block;
     font-family: 'Open Sans Condensed', sans-serif;
+    color: var(--text-color);
+    margin-right: 15px;
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 200;
 }
-
+.main-profile-edit {
+    text-decoration: none;
+    margin-right: 15px;
+    padding: 5px 9px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: bold;
+}
+.main-profile-status__list li {
+    display: inline-block;
+    list-style: none;
+    font-size: 1.4rem;
+    margin: 20px 20px 20px 0;
+    color: var(--text-color);
+}
+.main-profile-description {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    line-height: 25px;
+}
+.main-profile-description h1 {
+    font-size: inherit;
+}
+.main-profile-description a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #00376B;
+}
+.main-profile-description a:visited {
+    color: #00376B;
+}
+/* Links section */
+.main-links {
+    width: 1000px;
+    margin: 0 auto;
+    border-top: 1px solid #dbdbdb;
+}
+.main-links-container {
+    width: 60%;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.main-links-container ul {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-links-container li {
+    display: inline-block;
+    list-style: none;
+    color: #8e8e8e;
+    font-size: 1.6rem;
+}
 /* Post Styles */
 .post-list {
     display: grid;
